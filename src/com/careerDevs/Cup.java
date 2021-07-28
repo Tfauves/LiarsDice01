@@ -1,14 +1,18 @@
 package com.careerDevs;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Cup {
     List<Die> dice = new ArrayList<>();
+    //Map<Integer, Integer> dice = new HashMap<>();
 
     public Cup() {
         while(dice.size() < 5) {
             dice.add(new Die());
+
         }
     }
 

@@ -1,4 +1,5 @@
 package com.careerDevs;
+import java.util.Random;
 
 public class Die {
     public int numberOfSides;
@@ -12,8 +13,16 @@ public class Die {
         this.numberOfSides = numberOfSides;
     }
 
-    public void roll() {
-        faceUpValue = (int) ((Math.random() * numberOfSides) + 1);
-    }
+//    //public void roll() {
+//        faceUpValue = (int) ((Math.random() * numberOfSides) + 1);
+//    }
+//
 
+
+    public void roll() {
+       Random dieFaceValue = new Random();
+       int dieMaxSide = 6;
+       int dieMinSide = 1;
+       faceUpValue = dieFaceValue.nextInt(dieMaxSide) + dieMinSide;
+    }
 }
