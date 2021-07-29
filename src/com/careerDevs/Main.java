@@ -9,5 +9,8 @@ public class Main {
         cup1.roll();
         System.out.println(cup1.displayCup());
 
+        cup1.roll();
+        System.out.println(cup1.displayCup());
+
     }
 }

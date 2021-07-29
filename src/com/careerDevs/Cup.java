@@ -18,16 +18,6 @@ public class Cup {
         }
     }
 
-    public void roll(int selection) {
-        dice.get(selection).roll();
-    }
-
-    public void roll(List<Integer> selections) {
-        for (int selection : selections) {
-            roll(selection);
-        }
-    }
-
     public String displayCup() {
         String output = "";
         for (Die die : dice) {
@@ -36,15 +26,27 @@ public class Cup {
         return output.trim();
     }
 
-    public List<Integer> parseSelections(String input) {
-        String[] inputArr = input.split(" "); // ["1", "2", "5"]
-        // String[] -> List<Integer>
-        List<Integer> selections = new ArrayList<>();
-        for (String number : inputArr) {
-            selections.add(Integer.parseInt(number) - 1);
-        }
 
-        return selections.contains(-1) ? new ArrayList<Integer>() : selections;
-    }
+
+//    public void roll(int selection) {
+//        dice.get(selection).roll();
+//    }
+
+//    public void roll(List<Integer> selections) {
+//        for (int selection : selections) {
+//            roll(selection);
+//        }
+//    }
+
+//    public List<Integer> parseSelections(String input) {
+//        String[] inputArr = input.split(" "); // ["1", "2", "5"]
+//        // String[] -> List<Integer>
+//        List<Integer> selections = new ArrayList<>();
+//        for (String number : inputArr) {
+//            selections.add(Integer.parseInt(number) - 1);
+//        }
+//
+//        return selections.contains(-1) ? new ArrayList<Integer>() : selections;
+//    }
 
 }
